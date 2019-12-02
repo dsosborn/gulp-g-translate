@@ -1,0 +1,242 @@
+/* Mixins and functions to be loaded first, no variables in here */
+/* Variables to be loaded second, before base styles. Can use mixins and functions */
+/* Base styles brought over from Jekyll original build */
+blockquote,
+body,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+ol,
+p,
+pre,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 300 16px/1.5 "Google Sans", "sans-serif";
+  color: #111;
+  background-color: #ffffff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+@-moz-document url-prefix() {
+  body {
+    font-weight: lighter !important;
+  }
+}
+blockquote,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+pre,
+ul {
+  margin-bottom: 15px;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+ol,
+ul {
+  margin-left: 30px;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+}
+
+a {
+  color: #3c4043;
+  text-decoration: none;
+}
+a:hover {
+  color: #111;
+  text-decoration: underline;
+}
+
+.ad-wrapper {
+  -webkit-text-size-adjust: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #c9c9c9;
+  background-color: white;
+  background-size: cover;
+}
+.ad-wrapper a {
+  text-decoration: none;
+}
+
+body,
+body * {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  outline: 0;
+  background-repeat: no-repeat;
+  vertical-align: baseline;
+}
+
+body {
+  background: #ffffff;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+}
+
+#container {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  margin: auto;
+  overflow: hidden;
+  border: 1px solid #000;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#white {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+}
+
+#content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+#headline {
+  position: absolute;
+  top: 127px;
+  left: 10px;
+  width: calc(100% - 20px);
+  color: #3c4043;
+  font-family: "Google Sans", "sans-serif";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+#cta_btn,
+#logo {
+  -webkit-backface-visibility: hidden;
+  /* Chrome, Safari, Opera */
+  box-sizing: border-box;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+#logo {
+  top: 40px;
+  max-width: 100%;
+  width: 150px;
+  margin-left: 25%;
+}
+
+#group_icons {
+  bottom: 100px;
+  max-width: 100%;
+  width: 175px;
+  height: 40px;
+  margin-left: 22%;
+  position: absolute;
+}
+
+#icon {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+#cta_overlay {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0;
+}
+
+#cta_btn {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  position: absolute;
+  bottom: 40px;
+  padding: 8px 10px;
+  border: 1px solid #4285f4;
+  border-radius: 2px;
+  background: #ffffff;
+  color: #4285f4;
+  font-family: "Google Sans", "sans-serif";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  margin-left: 30%;
+  white-space: nowrap;
+}
+.ad-wrapper.ad-120-600 {
+  z-index: 0;
+  width: 120px;
+  height: 600px;
+  overflow: hidden;
+  /* Concept-specific headline styles */
+}

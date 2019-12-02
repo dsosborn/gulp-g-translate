@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="ad.size" content="width=<%= width %>,height=<%= height %>" />
+    <title>Google G Suite Stand Alone</title>
+    <meta
+      name="description"
+      content="A collection of banner ad templates."
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Google+Sans:300,400,500,700"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script type="text/javascript">
+      var clickTag = "";
+    </script>
+    <style type="text/css">
+      .bodymovin-container .png image {
+        -ms-interpolation-mode: nearest-neighbor !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      id="ad-wrapper"
+      class="ad-wrapper ad-<%= width %>-<%= height %>"
+      width=""
+      height=""
+    >
+      <script>
+        var bannerStyle = "standard";
+      </script>
+
+      <!-- Main Background Here-->
+      <div id="theme-gs_gmail_a" class="banner-theme" data-file=""></div>
+      <div
+        id="ad-inner"
+        class="gs_gmail_a"
+        data-anim-type=""
+        data-unit="<%= width %>x<%= height %>"
+      >
+        <!-- BODYMOVIN -->
+        <div id="icon"></div>
+
+        <!-- Exit URL -->
+        <a
+          href="javascript:void(window.open(window.clickTag))"
+          id="cta_overlay"
+        ></a>
+
+        <!-- Comment this layer to do alignment fixes -->
+        <div id="white"></div>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/cssplugin_2.0.1_min.js"></script>
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/easepack_2.0.1_min.js"></script>
+  <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_2.0.1_min.js"></script>
+
+  <script type="text/javascript" src="js/animation-min.js"></script>
+  <script type="text/javascript" src="js/lottie.js"></script>
+  <script>
+    
+    var data = '<%= lottiejson %>';
+    data = data
+      .replace(/\\n/g, "\\n")
+      .replace(/\\'/g, "\\'")
+      .replace(/\\"/g, '\\"')
+      .replace(/\\&/g, "\\&")
+      .replace(/\\r/g, "\\r")
+      .replace(/\\t/g, "\\t")
+      .replace(/\\b/g, "\\b")
+      .replace(/\\f/g, "\\f");
+    data = data.replace(/[\u0000-\u0019]+/g, "");
+    var animation = lottie.loadAnimation({
+      container: document.getElementById("icon"),
+      rendererSettings: {
+        className: "bodymovin-container",
+        scaleMode: "noScale"
+      },
+      renderer: "svg",
+      loop: false,
+      autoplay: true,
+      animationData: JSON.parse(data)
+    });
+
+    // Loop Control
+    var LOOPS = 3;
+    var loopCounter = 0;
+    animation.addEventListener("complete", function() {
+      loopCounter++;
+      if (loopCounter < LOOPS) {
+        animation.goToAndPlay(0);
+      }
+    });
+
+    // Framerate Control
+    animation.frameRate = 30;
+    animation.setSubframe(false);
+  </script>
+</html>
